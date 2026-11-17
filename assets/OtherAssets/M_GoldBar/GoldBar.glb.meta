@@ -1,0 +1,143 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "1749bf47-b0ae-401c-8269-a5a0358ac2c5",
+  "files": [],
+  "subMetas": {
+    "12860": {
+      "importer": "gltf-mesh",
+      "uuid": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@12860",
+      "displayName": "",
+      "id": "12860",
+      "name": "GoldBar.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6d1e1": {
+      "importer": "gltf-embeded-image",
+      "uuid": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@6d1e1",
+      "displayName": "",
+      "id": "6d1e1",
+      "name": "T_GoldBar.image",
+      "userData": {
+        "gltfIndex": 0,
+        "fixAlphaTransparencyArtifacts": true,
+        "hasAlpha": true,
+        "type": "texture"
+      },
+      "ver": "1.0.3",
+      "imported": true,
+      "files": [
+        ".json",
+        ".png"
+      ],
+      "subMetas": {}
+    },
+    "e9dc1": {
+      "importer": "texture",
+      "uuid": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@e9dc1",
+      "displayName": "",
+      "id": "e9dc1",
+      "name": "T_GoldBar.texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "linear",
+        "anisotropy": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@6d1e1"
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cd553": {
+      "importer": "gltf-material",
+      "uuid": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@cd553",
+      "displayName": "",
+      "id": "cd553",
+      "name": "M_GoldBar.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a8c23": {
+      "importer": "gltf-scene",
+      "uuid": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@a8c23",
+      "displayName": "",
+      "id": "a8c23",
+      "name": "GoldBar.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [
+      {
+        "name": "T_GoldBar",
+        "uri": "1749bf47-b0ae-401c-8269-a5a0358ac2c5@6d1e1"
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "1749bf47-b0ae-401c-8269-a5a0358ac2c5@12860"
+      ],
+      "skeletons": [],
+      "textures": [
+        "1749bf47-b0ae-401c-8269-a5a0358ac2c5@e9dc1"
+      ],
+      "materials": [
+        "1749bf47-b0ae-401c-8269-a5a0358ac2c5@cd553"
+      ],
+      "scenes": [
+        "1749bf47-b0ae-401c-8269-a5a0358ac2c5@a8c23"
+      ]
+    }
+  }
+}

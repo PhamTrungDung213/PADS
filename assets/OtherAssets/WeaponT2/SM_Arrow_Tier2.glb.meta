@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b13dcd97-97eb-4fbc-89b3-8f82ad480d00",
+  "files": [],
+  "subMetas": {
+    "e02dc": {
+      "importer": "gltf-mesh",
+      "uuid": "b13dcd97-97eb-4fbc-89b3-8f82ad480d00@e02dc",
+      "displayName": "",
+      "id": "e02dc",
+      "name": "Arrow_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 88
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "b13dcd97-97eb-4fbc-89b3-8f82ad480d00@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d8780": {
+      "importer": "gltf-scene",
+      "uuid": "b13dcd97-97eb-4fbc-89b3-8f82ad480d00@d8780",
+      "displayName": "",
+      "id": "d8780",
+      "name": "SM_Arrow_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "b13dcd97-97eb-4fbc-89b3-8f82ad480d00@e02dc"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "b13dcd97-97eb-4fbc-89b3-8f82ad480d00@ec36e"
+      ],
+      "scenes": [
+        "b13dcd97-97eb-4fbc-89b3-8f82ad480d00@d8780"
+      ]
+    }
+  }
+}

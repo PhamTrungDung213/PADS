@@ -1,0 +1,108 @@
+// Unity-style particle shading for imported VFX (cocos-vfx-importer-plus).
+// rgb = vertexColor * tintColor * tex * emission ; a = vertexColor.a * tintColor.a * tex.a
+// (tex.a optionally rebuilt from grayscale, like Unity "Alpha Source: From Gray Scale")
+// Matches the common Unity VFX shaders (Hovl CenterGlow, Guungshi Glow, URP Particles/Unlit)
+// minus their noise/flow extras. Technique 0 = additive, 1 = alpha blend.
+CCEffect %{
+  temporaries:
+    b1: &b1
+      targets:
+      - blend: true
+        blendSrc: src_alpha
+        blendDst: one
+        blendSrcAlpha: src_alpha
+        blendDstAlpha: one
+    b2: &b2
+      targets:
+      - blend: true
+        blendSrc: src_alpha
+        blendDst: one_minus_src_alpha
+        blendSrcAlpha: zero
+        blendDstAlpha: one
+        blendAlphaEq: max
+    d1: &d1 { depthTest: true, depthWrite: false }
+    r1: &r1 { cullMode: none }
+    p1: &p1
+      mainTexture:            { value: white }
+      maskTexture:            { value: white, editor: { tooltip: "Unity _Mask: r*a multiplies alpha (enable with useMask)" } }
+      mainTiling_Offset:      { value: [1, 1, 0, 0] }
+      tintColor:              { value: [1, 1, 1, 1], editor: { type: color } }
+      emission:               { value: 1.0, target: params.x }
+      alphaMode:              { value: 0.0, target: params.y, editor: { tooltip: "0 = texture alpha, 1 = from grayscale (Unity Alpha Source: From Gray Scale), 2 = opaque, 3 = texture alpha * linear luminance (Guungshi Glow/Noise)" } }
+      useMask:                { value: 0.0, target: params.z }
+      useVertexColor:         { value: 1.0, target: params.w, editor: { tooltip: "0 = ignore particle/mesh vertex colour (Unity shader graphs without a Vertex Color node)" } }
+      alphaScale:             { value: 1.0, target: params2.x, editor: { tooltip: "Unity Guungshi _Burn: alpha = saturate(alpha * alphaScale)" } }
+
+  techniques:
+  - name: add
+    passes:
+    - vert: builtin/internal/particle-vs-legacy:lpvs_main
+      frag: vfx-fs:frag
+      rasterizerState: *r1
+      depthStencilState: *d1
+      blendState: *b1
+      properties: *p1
+    - vert: builtin/internal/particle-vs-legacy:lpvs_main
+      frag: vfx-fs:frag
+      phase: deferred-forward
+      rasterizerState: *r1
+      depthStencilState: *d1
+      blendState: *b1
+      propertyIndex: 0
+  - name: alpha-blend
+    passes:
+    - vert: builtin/internal/particle-vs-legacy:lpvs_main
+      frag: vfx-fs:frag
+      rasterizerState: *r1
+      depthStencilState: *d1
+      blendState: *b2
+      properties: *p1
+    - vert: builtin/internal/particle-vs-legacy:lpvs_main
+      frag: vfx-fs:frag
+      phase: deferred-forward
+      rasterizerState: *r1
+      depthStencilState: *d1
+      blendState: *b2
+      propertyIndex: 0
+}%
+
+CCProgram vfx-fs %{
+  precision mediump float;
+  #include <legacy/output>
+
+  in vec2 uv;
+  in vec4 color;
+
+  uniform sampler2D mainTexture;
+  uniform sampler2D maskTexture;
+  uniform FragConstants {
+    vec4 tintColor;
+    vec4 params;
+    vec4 params2;
+  };
+
+  vec3 toLinear (vec3 c) { return pow(max(c, vec3(0.0)), vec3(2.2)); }
+  vec3 toGamma (vec3 c) { return pow(max(c, vec3(0.0)), vec3(1.0 / 2.2)); }
+
+  vec4 frag () {
+    vec4 tex = texture(mainTexture, uv);
+    if (params.y > 2.5) {
+      // Guungshi Glow/Noise (measured in Unity): alpha follows texture alpha times linear luminance.
+      tex.a *= dot(toLinear(tex.rgb), vec3(0.2126729, 0.7151522, 0.0721750));
+    } else if (params.y > 1.5) {
+      tex.a = 1.0;
+    } else if (params.y > 0.5) {
+      tex.a = (tex.r + tex.g + tex.b) / 3.0;
+    }
+    if (params.z > 0.5) {
+      vec4 m = texture(maskTexture, uv);
+      tex.a *= m.r * m.a;
+    }
+    vec4 vc = mix(vec4(1.0), color, params.w);
+    // Unity project is Linear colour space: colours and textures are linearised, multiplied
+    // (with emission) and written back as sRGB. Keeps hue where gamma maths would clip to white.
+    vec3 rgb = toLinear(vc.rgb) * toLinear(tintColor.rgb) * toLinear(tex.rgb) * params.x;
+    vec4 col = vec4(min(toGamma(rgb), vec3(1.0)), clamp(vc.a * tintColor.a * tex.a * params2.x, 0.0, 1.0));
+    return CCFragOutput(col);
+  }
+}%

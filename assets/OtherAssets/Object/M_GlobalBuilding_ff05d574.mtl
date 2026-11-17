@@ -1,0 +1,41 @@
+{
+  "__type__": "cc.Material",
+  "_name": "M_GlobalBuilding",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "b20c1097-0d3b-4597-9221-720dae37d459",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "tilingOffset": {
+        "__type__": "cc.Vec4",
+        "x": 1,
+        "y": 1,
+        "z": 0,
+        "w": 0
+      },
+      "mainTexture": {
+        "__uuid__": "197b8ba0-9da4-482a-ac25-79d836e7e79b@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      }
+    }
+  ]
+}

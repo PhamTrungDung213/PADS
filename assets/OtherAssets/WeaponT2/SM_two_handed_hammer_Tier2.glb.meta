@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "f696db88-3446-40d4-83b7-98945304cdee",
+  "files": [],
+  "subMetas": {
+    "f8747": {
+      "importer": "gltf-mesh",
+      "uuid": "f696db88-3446-40d4-83b7-98945304cdee@f8747",
+      "displayName": "",
+      "id": "f8747",
+      "name": "two_handed_hammer_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 990
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "f696db88-3446-40d4-83b7-98945304cdee@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3b4b9": {
+      "importer": "gltf-scene",
+      "uuid": "f696db88-3446-40d4-83b7-98945304cdee@3b4b9",
+      "displayName": "",
+      "id": "3b4b9",
+      "name": "SM_two_handed_hammer_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "f696db88-3446-40d4-83b7-98945304cdee@f8747"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "f696db88-3446-40d4-83b7-98945304cdee@ec36e"
+      ],
+      "scenes": [
+        "f696db88-3446-40d4-83b7-98945304cdee@3b4b9"
+      ]
+    }
+  }
+}

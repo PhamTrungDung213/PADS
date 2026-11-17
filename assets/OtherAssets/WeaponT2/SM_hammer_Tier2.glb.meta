@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "fd8cb728-1ecc-4013-b134-4cc8f7c43b87",
+  "files": [],
+  "subMetas": {
+    "8922f": {
+      "importer": "gltf-mesh",
+      "uuid": "fd8cb728-1ecc-4013-b134-4cc8f7c43b87@8922f",
+      "displayName": "",
+      "id": "8922f",
+      "name": "hammer_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 646
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "fd8cb728-1ecc-4013-b134-4cc8f7c43b87@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "246bd": {
+      "importer": "gltf-scene",
+      "uuid": "fd8cb728-1ecc-4013-b134-4cc8f7c43b87@246bd",
+      "displayName": "",
+      "id": "246bd",
+      "name": "SM_hammer_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "fd8cb728-1ecc-4013-b134-4cc8f7c43b87@8922f"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "fd8cb728-1ecc-4013-b134-4cc8f7c43b87@ec36e"
+      ],
+      "scenes": [
+        "fd8cb728-1ecc-4013-b134-4cc8f7c43b87@246bd"
+      ]
+    }
+  }
+}

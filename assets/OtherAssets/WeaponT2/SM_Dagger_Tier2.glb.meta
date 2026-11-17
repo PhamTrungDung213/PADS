@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c91048df-06b2-4749-9687-76f5555ba151",
+  "files": [],
+  "subMetas": {
+    "ca07c": {
+      "importer": "gltf-mesh",
+      "uuid": "c91048df-06b2-4749-9687-76f5555ba151@ca07c",
+      "displayName": "",
+      "id": "ca07c",
+      "name": "Dagger_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 166
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "c91048df-06b2-4749-9687-76f5555ba151@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "459cd": {
+      "importer": "gltf-scene",
+      "uuid": "c91048df-06b2-4749-9687-76f5555ba151@459cd",
+      "displayName": "",
+      "id": "459cd",
+      "name": "SM_Dagger_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "c91048df-06b2-4749-9687-76f5555ba151@ca07c"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "c91048df-06b2-4749-9687-76f5555ba151@ec36e"
+      ],
+      "scenes": [
+        "c91048df-06b2-4749-9687-76f5555ba151@459cd"
+      ]
+    }
+  }
+}

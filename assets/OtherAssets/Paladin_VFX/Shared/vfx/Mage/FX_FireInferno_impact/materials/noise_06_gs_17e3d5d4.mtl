@@ -1,0 +1,60 @@
+{
+  "__type__": "cc.Material",
+  "_name": "noise_06_gs",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "57a99487-c4c8-4526-b8a2-45545596176c",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 1,
+  "_defines": [
+    {},
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "799af19e-2053-4456-93d7-0faed93d1e6c@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "emission": 8,
+      "alphaMode": 1,
+      "alphaScale": 4,
+      "maskTexture": {
+        "__uuid__": "79f18839-aa0d-4e03-8642-464d6b69b722@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "useMask": 1
+    },
+    {}
+  ]
+}

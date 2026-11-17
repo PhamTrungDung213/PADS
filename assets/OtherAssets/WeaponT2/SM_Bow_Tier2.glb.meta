@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "a8f15024-ffc5-4288-bfbc-e9ab09afb044",
+  "files": [],
+  "subMetas": {
+    "281ae": {
+      "importer": "gltf-mesh",
+      "uuid": "a8f15024-ffc5-4288-bfbc-e9ab09afb044@281ae",
+      "displayName": "",
+      "id": "281ae",
+      "name": "Bow_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 592
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "a8f15024-ffc5-4288-bfbc-e9ab09afb044@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2bad5": {
+      "importer": "gltf-scene",
+      "uuid": "a8f15024-ffc5-4288-bfbc-e9ab09afb044@2bad5",
+      "displayName": "",
+      "id": "2bad5",
+      "name": "SM_Bow_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "a8f15024-ffc5-4288-bfbc-e9ab09afb044@281ae"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "a8f15024-ffc5-4288-bfbc-e9ab09afb044@ec36e"
+      ],
+      "scenes": [
+        "a8f15024-ffc5-4288-bfbc-e9ab09afb044@2bad5"
+      ]
+    }
+  }
+}

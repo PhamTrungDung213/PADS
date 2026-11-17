@@ -1,0 +1,728 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105",
+  "files": [],
+  "subMetas": {
+    "91877": {
+      "importer": "gltf-material",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@91877",
+      "displayName": "",
+      "id": "91877",
+      "name": "M_CampfireCooking_Meal.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41ac8": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@41ac8",
+      "displayName": "",
+      "id": "41ac8",
+      "name": "Cube.001.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 12
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "08c68": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@08c68",
+      "displayName": "",
+      "id": "08c68",
+      "name": "Plane.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 200
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "96e4e": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@96e4e",
+      "displayName": "",
+      "id": "96e4e",
+      "name": "OrcFortress_Campfire.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 2438
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c954b": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@c954b",
+      "displayName": "",
+      "id": "c954b",
+      "name": "Restroom_Campfire.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 1698
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8be79": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@8be79",
+      "displayName": "",
+      "id": "8be79",
+      "name": "Building_Environment.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 672
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "98b09": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@98b09",
+      "displayName": "",
+      "id": "98b09",
+      "name": "Building_Environment1.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 562
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "53bf0": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@53bf0",
+      "displayName": "",
+      "id": "53bf0",
+      "name": "Building_Environment2.mesh",
+      "userData": {
+        "gltfIndex": 6,
+        "triangleCount": 921
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "142e6": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@142e6",
+      "displayName": "",
+      "id": "142e6",
+      "name": "Building_Environment3.mesh",
+      "userData": {
+        "gltfIndex": 7,
+        "triangleCount": 752
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "eb7e5": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@eb7e5",
+      "displayName": "",
+      "id": "eb7e5",
+      "name": "Building_Environment4.mesh",
+      "userData": {
+        "gltfIndex": 8,
+        "triangleCount": 961
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a1209": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@a1209",
+      "displayName": "",
+      "id": "a1209",
+      "name": "Building_Environment_Connect.mesh",
+      "userData": {
+        "gltfIndex": 9,
+        "triangleCount": 279
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9151": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@f9151",
+      "displayName": "",
+      "id": "f9151",
+      "name": "Building_Environment_Island.mesh",
+      "userData": {
+        "gltfIndex": 10,
+        "triangleCount": 120
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "51d6b": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@51d6b",
+      "displayName": "",
+      "id": "51d6b",
+      "name": "Building_feature_bridge.mesh",
+      "userData": {
+        "gltfIndex": 11,
+        "triangleCount": 578
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fb666": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@fb666",
+      "displayName": "",
+      "id": "fb666",
+      "name": "Building_feature_Ship.mesh",
+      "userData": {
+        "gltfIndex": 12,
+        "triangleCount": 1939
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a3db8": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@a3db8",
+      "displayName": "",
+      "id": "a3db8",
+      "name": "Building_feature_Ship2.mesh",
+      "userData": {
+        "gltfIndex": 13,
+        "triangleCount": 1628
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "01bdf": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@01bdf",
+      "displayName": "",
+      "id": "01bdf",
+      "name": "Oasis_dungeon_grass.mesh",
+      "userData": {
+        "gltfIndex": 14,
+        "triangleCount": 2
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "fd220": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@fd220",
+      "displayName": "",
+      "id": "fd220",
+      "name": "Oasis_dungeon_grass6.mesh",
+      "userData": {
+        "gltfIndex": 15,
+        "triangleCount": 14
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "adea1": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@adea1",
+      "displayName": "",
+      "id": "adea1",
+      "name": "Oasis_dungeon_grass7.mesh",
+      "userData": {
+        "gltfIndex": 16,
+        "triangleCount": 14
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "8cc2c": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@8cc2c",
+      "displayName": "",
+      "id": "8cc2c",
+      "name": "Oasis_dungeon_grass8.mesh",
+      "userData": {
+        "gltfIndex": 17,
+        "triangleCount": 14
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cc3e2": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@cc3e2",
+      "displayName": "",
+      "id": "cc3e2",
+      "name": "Oasis_dungeon_lotus6.mesh",
+      "userData": {
+        "gltfIndex": 18,
+        "triangleCount": 2
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "443a0": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@443a0",
+      "displayName": "",
+      "id": "443a0",
+      "name": "SM_Oasis_dungeon_lotus10.mesh",
+      "userData": {
+        "gltfIndex": 19,
+        "triangleCount": 192
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f0c09": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@f0c09",
+      "displayName": "",
+      "id": "f0c09",
+      "name": "SM_Oasis_dungeon_lotus20.mesh",
+      "userData": {
+        "gltfIndex": 20,
+        "triangleCount": 18
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6a213": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@6a213",
+      "displayName": "",
+      "id": "6a213",
+      "name": "SM_Oasis_dungeon_lotus30.mesh",
+      "userData": {
+        "gltfIndex": 21,
+        "triangleCount": 276
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f46db": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@f46db",
+      "displayName": "",
+      "id": "f46db",
+      "name": "Oasis_dungeon_pillar1.mesh",
+      "userData": {
+        "gltfIndex": 22,
+        "triangleCount": 72
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7843c": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@7843c",
+      "displayName": "",
+      "id": "7843c",
+      "name": "Oasis_dungeon_pillar3.mesh",
+      "userData": {
+        "gltfIndex": 23,
+        "triangleCount": 238
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c6d03": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@c6d03",
+      "displayName": "",
+      "id": "c6d03",
+      "name": "Oasis_dungeon_pillar4.mesh",
+      "userData": {
+        "gltfIndex": 24,
+        "triangleCount": 78
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "87eb7": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@87eb7",
+      "displayName": "",
+      "id": "87eb7",
+      "name": "Oasis_dungeon_pillar6.mesh",
+      "userData": {
+        "gltfIndex": 25,
+        "triangleCount": 210
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b3e6a": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@b3e6a",
+      "displayName": "",
+      "id": "b3e6a",
+      "name": "SM_Oasis_dungeon_stairs1.mesh",
+      "userData": {
+        "gltfIndex": 26,
+        "triangleCount": 62
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "320c5": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@320c5",
+      "displayName": "",
+      "id": "320c5",
+      "name": "SM_Oasis_dungeon_stairs2.mesh",
+      "userData": {
+        "gltfIndex": 27,
+        "triangleCount": 122
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ddb09": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@ddb09",
+      "displayName": "",
+      "id": "ddb09",
+      "name": "Oasis_dungeon_tree3.mesh",
+      "userData": {
+        "gltfIndex": 28,
+        "triangleCount": 1012
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5a7dc": {
+      "importer": "gltf-mesh",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@5a7dc",
+      "displayName": "",
+      "id": "5a7dc",
+      "name": "Oasis_dungeon_tree3_2.mesh",
+      "userData": {
+        "gltfIndex": 29,
+        "triangleCount": 901
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6afb1": {
+      "importer": "gltf-material",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@6afb1",
+      "displayName": "",
+      "id": "6afb1",
+      "name": "M_Water_Buidling.material",
+      "userData": {
+        "gltfIndex": 0,
+        "redirect": "aca926d3-0db7-4000-aee9-6d590a9cb7c4"
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c54fa": {
+      "importer": "gltf-material",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@c54fa",
+      "displayName": "",
+      "id": "c54fa",
+      "name": "M_CampfireCooking.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "bceb4": {
+      "importer": "gltf-material",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@bceb4",
+      "displayName": "",
+      "id": "bceb4",
+      "name": "M_Oasis_Dungeon_Easy.material",
+      "userData": {
+        "gltfIndex": 3,
+        "redirect": "8b272658-eaee-4424-8448-fd51809fd50e"
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 4,
+        "redirect": "5f1c15f5-0d53-4489-aa2d-c55f0eb05072"
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0f8ab": {
+      "importer": "gltf-scene",
+      "uuid": "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@0f8ab",
+      "displayName": "",
+      "id": "0f8ab",
+      "name": "Building Map.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@41ac8",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@08c68",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@96e4e",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@c954b",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@8be79",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@98b09",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@53bf0",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@142e6",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@eb7e5",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@a1209",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@f9151",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@51d6b",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@fb666",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@a3db8",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@01bdf",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@fd220",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@adea1",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@8cc2c",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@cc3e2",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@443a0",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@f0c09",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@6a213",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@f46db",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@7843c",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@c6d03",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@87eb7",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@b3e6a",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@320c5",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@ddb09",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@5a7dc"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@6afb1",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@c54fa",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@91877",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@bceb4",
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@ec36e"
+      ],
+      "scenes": [
+        "cfcc666f-0ce2-48d4-b5b3-43b8d8908105@0f8ab"
+      ]
+    },
+    "meshSimplify": {
+      "enable": false,
+      "targetRatio": 0.4,
+      "autoErrorRate": true,
+      "errorRate": 1,
+      "lockBoundary": true
+    },
+    "meshCompress": {
+      "enable": true,
+      "compress": true,
+      "quantize": false,
+      "encode": true
+    }
+  }
+}

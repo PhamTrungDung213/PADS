@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "4ea17eef-4b6b-485b-97f9-afce0a56e8f0",
+  "files": [],
+  "subMetas": {
+    "953f3": {
+      "importer": "gltf-mesh",
+      "uuid": "4ea17eef-4b6b-485b-97f9-afce0a56e8f0@953f3",
+      "displayName": "",
+      "id": "953f3",
+      "name": "spear_sword_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 360
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "4ea17eef-4b6b-485b-97f9-afce0a56e8f0@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ded96": {
+      "importer": "gltf-scene",
+      "uuid": "4ea17eef-4b6b-485b-97f9-afce0a56e8f0@ded96",
+      "displayName": "",
+      "id": "ded96",
+      "name": "SM_spear_sword_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "4ea17eef-4b6b-485b-97f9-afce0a56e8f0@953f3"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "4ea17eef-4b6b-485b-97f9-afce0a56e8f0@ec36e"
+      ],
+      "scenes": [
+        "4ea17eef-4b6b-485b-97f9-afce0a56e8f0@ded96"
+      ]
+    }
+  }
+}

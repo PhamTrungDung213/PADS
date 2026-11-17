@@ -1,0 +1,148 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401",
+  "files": [],
+  "subMetas": {
+    "7a166": {
+      "importer": "gltf-mesh",
+      "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401@7a166",
+      "displayName": "",
+      "id": "7a166",
+      "name": "castle_walls.002.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 5209
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f5722": {
+      "importer": "gltf-mesh",
+      "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401@f5722",
+      "displayName": "",
+      "id": "f5722",
+      "name": "castle_walls_gate.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 141
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "27e86": {
+      "importer": "gltf-mesh",
+      "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401@27e86",
+      "displayName": "",
+      "id": "27e86",
+      "name": "Quad.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 2
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "df8d5": {
+      "importer": "gltf-material",
+      "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401@df8d5",
+      "displayName": "",
+      "id": "df8d5",
+      "name": "M_GlobalBuilding.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f27bc": {
+      "importer": "gltf-material",
+      "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401@f27bc",
+      "displayName": "",
+      "id": "f27bc",
+      "name": "WildWestForest_Grass.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "abf4b": {
+      "importer": "gltf-scene",
+      "uuid": "b0f66259-7c8c-4b88-b42d-de82ef0e1401@abf4b",
+      "displayName": "",
+      "id": "abf4b",
+      "name": "CastleDoor.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "b0f66259-7c8c-4b88-b42d-de82ef0e1401@7a166",
+        "b0f66259-7c8c-4b88-b42d-de82ef0e1401@f5722",
+        "b0f66259-7c8c-4b88-b42d-de82ef0e1401@27e86"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "b0f66259-7c8c-4b88-b42d-de82ef0e1401@df8d5",
+        "b0f66259-7c8c-4b88-b42d-de82ef0e1401@f27bc"
+      ],
+      "scenes": [
+        "b0f66259-7c8c-4b88-b42d-de82ef0e1401@abf4b"
+      ]
+    }
+  }
+}

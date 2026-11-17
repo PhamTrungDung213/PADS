@@ -1,0 +1,60 @@
+{
+  "__type__": "cc.Material",
+  "_name": "VFX_M_DisAdd_Slash03",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "57a99487-c4c8-4526-b8a2-45545596176c",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {},
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    },
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "7a073a35-4f28-481e-b388-f551fdfa385f@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "tintColor": {
+        "__type__": "cc.Color",
+        "r": 255,
+        "g": 255,
+        "b": 255,
+        "a": 255
+      },
+      "emission": 1,
+      "mainTiling_Offset": {
+        "__type__": "cc.Vec4",
+        "x": 1,
+        "y": 1.18,
+        "z": 0,
+        "w": -0.47
+      }
+    },
+    {}
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "__type__": "cc.Material",
+  "_name": "M_CampfireCooking_Meal",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "1ab52a40-c73d-4e4c-8e4e-b4c44a34455e",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "tilingOffset": {
+        "__type__": "cc.Vec4",
+        "x": 1,
+        "y": 1,
+        "z": 0,
+        "w": 0
+      },
+      "tintColor": {
+        "__type__": "cc.Vec4",
+        "x": 0.43,
+        "y": 0.12,
+        "z": 0.003,
+        "w": 1
+      }
+    }
+  ]
+}

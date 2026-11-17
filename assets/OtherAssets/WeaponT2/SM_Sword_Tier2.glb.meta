@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b6bd23fc-3657-46ad-ac4c-e3f996e99d06",
+  "files": [],
+  "subMetas": {
+    "054dd": {
+      "importer": "gltf-mesh",
+      "uuid": "b6bd23fc-3657-46ad-ac4c-e3f996e99d06@054dd",
+      "displayName": "",
+      "id": "054dd",
+      "name": "Sword_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 270
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "b6bd23fc-3657-46ad-ac4c-e3f996e99d06@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "03e27": {
+      "importer": "gltf-scene",
+      "uuid": "b6bd23fc-3657-46ad-ac4c-e3f996e99d06@03e27",
+      "displayName": "",
+      "id": "03e27",
+      "name": "SM_Sword_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "b6bd23fc-3657-46ad-ac4c-e3f996e99d06@054dd"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "b6bd23fc-3657-46ad-ac4c-e3f996e99d06@ec36e"
+      ],
+      "scenes": [
+        "b6bd23fc-3657-46ad-ac4c-e3f996e99d06@03e27"
+      ]
+    }
+  }
+}

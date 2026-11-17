@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "ebaebd00-bd74-4f55-8b01-86cee6798c1c",
+  "files": [],
+  "subMetas": {
+    "74838": {
+      "importer": "gltf-scene",
+      "uuid": "ebaebd00-bd74-4f55-8b01-86cee6798c1c@74838",
+      "displayName": "",
+      "id": "74838",
+      "name": "SM_crossbow_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b9008": {
+      "importer": "gltf-mesh",
+      "uuid": "ebaebd00-bd74-4f55-8b01-86cee6798c1c@b9008",
+      "displayName": "",
+      "id": "b9008",
+      "name": "crossbow_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 544
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "ebaebd00-bd74-4f55-8b01-86cee6798c1c@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "ebaebd00-bd74-4f55-8b01-86cee6798c1c@b9008"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "ebaebd00-bd74-4f55-8b01-86cee6798c1c@ec36e"
+      ],
+      "scenes": [
+        "ebaebd00-bd74-4f55-8b01-86cee6798c1c@74838"
+      ]
+    }
+  }
+}

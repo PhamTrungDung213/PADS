@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "6d61e9b3-c5b9-4c89-9868-e990f22d3dad",
+  "files": [],
+  "subMetas": {
+    "f3595": {
+      "importer": "gltf-mesh",
+      "uuid": "6d61e9b3-c5b9-4c89-9868-e990f22d3dad@f3595",
+      "displayName": "",
+      "id": "f3595",
+      "name": "Weapon_Paladin_02.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 360
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "6d61e9b3-c5b9-4c89-9868-e990f22d3dad@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c89f9": {
+      "importer": "gltf-scene",
+      "uuid": "6d61e9b3-c5b9-4c89-9868-e990f22d3dad@c89f9",
+      "displayName": "",
+      "id": "c89f9",
+      "name": "SM_1hand_book_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "6d61e9b3-c5b9-4c89-9868-e990f22d3dad@f3595"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "6d61e9b3-c5b9-4c89-9868-e990f22d3dad@ec36e"
+      ],
+      "scenes": [
+        "6d61e9b3-c5b9-4c89-9868-e990f22d3dad@c89f9"
+      ]
+    }
+  }
+}

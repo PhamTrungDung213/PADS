@@ -1,0 +1,27 @@
+{
+  "host": "127.0.0.1",
+  "port": 24175,
+  "portMode": "project",
+  "clientConfigEntries": {
+    "vscode": {
+      "serverName": "cocos-pads-736b7c",
+      "url": "http://127.0.0.1:24175/mcp/project/736b7cef460d0b6fedd8111c/",
+      "configPath": "C:\\Users\\admin\\AppData\\Roaming\\Code\\User\\mcp.json",
+      "projectIdentity": "736b7cef460d0b6fedd8111c"
+    }
+  },
+  "toolProfile": "core",
+  "enabledTools": [],
+  "disabledTools": [],
+  "enabledToolCategories": [],
+  "disabledToolCategories": [],
+  "enableSessions": false,
+  "enableConsoleLogging": true,
+  "executeJavascriptSafetyChecks": true,
+  "autostart": true,
+  "maxInteractionLogEntries": 50,
+  "lastClientTargetId": "vscode",
+  "activeToolProfileName": "",
+  "savedToolProfiles": [],
+  "language": "auto"
+}

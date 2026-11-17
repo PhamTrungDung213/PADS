@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "842998d7-0ab4-44cf-8b09-45da407ab810",
+  "files": [],
+  "subMetas": {
+    "df612": {
+      "importer": "gltf-mesh",
+      "uuid": "842998d7-0ab4-44cf-8b09-45da407ab810@df612",
+      "displayName": "",
+      "id": "df612",
+      "name": "two_handed_sword_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 358
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "842998d7-0ab4-44cf-8b09-45da407ab810@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cfde0": {
+      "importer": "gltf-scene",
+      "uuid": "842998d7-0ab4-44cf-8b09-45da407ab810@cfde0",
+      "displayName": "",
+      "id": "cfde0",
+      "name": "SM_two_handed_sword_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "842998d7-0ab4-44cf-8b09-45da407ab810@df612"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "842998d7-0ab4-44cf-8b09-45da407ab810@ec36e"
+      ],
+      "scenes": [
+        "842998d7-0ab4-44cf-8b09-45da407ab810@cfde0"
+      ]
+    }
+  }
+}

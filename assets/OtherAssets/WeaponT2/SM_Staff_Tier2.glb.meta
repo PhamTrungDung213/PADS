@@ -1,0 +1,93 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "c7993efa-f80f-4230-bfc1-29f9bf51d73d",
+  "files": [],
+  "subMetas": {
+    "79b4c": {
+      "importer": "gltf-mesh",
+      "uuid": "c7993efa-f80f-4230-bfc1-29f9bf51d73d@79b4c",
+      "displayName": "",
+      "id": "79b4c",
+      "name": "Staff_Tier2.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 304
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "c7993efa-f80f-4230-bfc1-29f9bf51d73d@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3e355": {
+      "importer": "gltf-scene",
+      "uuid": "c7993efa-f80f-4230-bfc1-29f9bf51d73d@3e355",
+      "displayName": "",
+      "id": "3e355",
+      "name": "SM_Staff_Tier2.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "c7993efa-f80f-4230-bfc1-29f9bf51d73d@79b4c"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "c7993efa-f80f-4230-bfc1-29f9bf51d73d@ec36e"
+      ],
+      "scenes": [
+        "c7993efa-f80f-4230-bfc1-29f9bf51d73d@3e355"
+      ]
+    }
+  }
+}

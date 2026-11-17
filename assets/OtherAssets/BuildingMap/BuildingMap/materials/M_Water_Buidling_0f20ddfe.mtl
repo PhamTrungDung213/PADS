@@ -1,0 +1,57 @@
+{
+  "__type__": "cc.Material",
+  "_name": "M_Water_Buidling",
+  "_objFlags": 0,
+  "__editorExtras__": {},
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "22d5daee-8f02-47f0-8663-adec9d7ba1eb",
+    "__expectedType__": "cc.EffectAsset"
+  },
+  "_techIdx": 0,
+  "_defines": [
+    {}
+  ],
+  "_states": [
+    {
+      "rasterizerState": {},
+      "depthStencilState": {},
+      "blendState": {
+        "targets": [
+          {}
+        ]
+      }
+    }
+  ],
+  "_props": [
+    {
+      "mainTexture": {
+        "__uuid__": "ccae0cd5-1d76-4fca-8da3-83f0a4c19590@6c48a",
+        "__expectedType__": "cc.Texture2D"
+      },
+      "distortStrenght": 0.15,
+      "color1": {
+        "__type__": "cc.Color",
+        "r": 50,
+        "g": 170,
+        "b": 105,
+        "a": 255
+      },
+      "color2": {
+        "__type__": "cc.Color",
+        "r": 15,
+        "g": 125,
+        "b": 70,
+        "a": 255
+      },
+      "stepIntersec": 1,
+      "tilingOffset": {
+        "__type__": "cc.Vec4",
+        "x": 12,
+        "y": 12,
+        "z": 0,
+        "w": 0
+      }
+    }
+  ]
+}

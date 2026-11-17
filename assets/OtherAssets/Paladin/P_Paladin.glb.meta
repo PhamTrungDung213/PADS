@@ -1,0 +1,726 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb",
+  "files": [
+    "__original-animation-0.bin",
+    "__original-animation-1.bin",
+    "__original-animation-2.bin",
+    "__original-animation-3.bin",
+    "__original-animation-4.bin",
+    "__original-animation-5.bin",
+    "__original-animation-6.bin",
+    "__original-animation-7.bin",
+    "__original-animation-8.bin",
+    "__original-animation-9.bin"
+  ],
+  "subMetas": {
+    "39452": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@39452",
+      "displayName": "",
+      "id": "39452",
+      "name": "Scene.002.mesh",
+      "userData": {
+        "gltfIndex": 3,
+        "triangleCount": 360
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "44826": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@44826",
+      "displayName": "",
+      "id": "44826",
+      "name": "Scene.003.mesh",
+      "userData": {
+        "gltfIndex": 5,
+        "triangleCount": 531
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "65556": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@65556",
+      "displayName": "",
+      "id": "65556",
+      "name": "paladin_2h_run.animation",
+      "userData": {
+        "gltfIndex": 9,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.0166666507720947
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "75365": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@75365",
+      "displayName": "",
+      "id": "75365",
+      "name": "Scene.008.mesh",
+      "userData": {
+        "gltfIndex": 8,
+        "triangleCount": 772
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "87442": {
+      "importer": "gltf-skeleton",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@87442",
+      "displayName": "",
+      "id": "87442",
+      "name": "Root_M.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 43
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d8e9c": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@d8e9c",
+      "displayName": "",
+      "id": "d8e9c",
+      "name": "paladin_2h_attack.animation",
+      "userData": {
+        "gltfIndex": 5,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 3.4666666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "6f82e": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@6f82e",
+      "displayName": "",
+      "id": "6f82e",
+      "name": "paladin_2h_die.animation",
+      "userData": {
+        "gltfIndex": 6,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.4333332777023315
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "30e5b": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@30e5b",
+      "displayName": "",
+      "id": "30e5b",
+      "name": "paladin_2h_get_hit.animation",
+      "userData": {
+        "gltfIndex": 7,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.0833333730697632
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "eb9f3": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@eb9f3",
+      "displayName": "",
+      "id": "eb9f3",
+      "name": "paladin_2h_idle.animation",
+      "userData": {
+        "gltfIndex": 8,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "034b2": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@034b2",
+      "displayName": "",
+      "id": "034b2",
+      "name": "Scene.005.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1850
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 1,
+        "triangleCount": 156
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "40b15": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@40b15",
+      "displayName": "",
+      "id": "40b15",
+      "name": "Scene.001.mesh",
+      "userData": {
+        "gltfIndex": 2,
+        "triangleCount": 136
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1e224": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@1e224",
+      "displayName": "",
+      "id": "1e224",
+      "name": "Scene.004.mesh",
+      "userData": {
+        "gltfIndex": 4,
+        "triangleCount": 441
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "040d6": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@040d6",
+      "displayName": "",
+      "id": "040d6",
+      "name": "Scene.006.mesh",
+      "userData": {
+        "gltfIndex": 6,
+        "triangleCount": 240
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9ff0c": {
+      "importer": "gltf-mesh",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@9ff0c",
+      "displayName": "",
+      "id": "9ff0c",
+      "name": "Scene.007.mesh",
+      "userData": {
+        "gltfIndex": 7,
+        "triangleCount": 396
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f72ef": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@f72ef",
+      "displayName": "",
+      "id": "f72ef",
+      "name": "paladin_1h_attack.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.5333333015441895
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "ee023": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@ee023",
+      "displayName": "",
+      "id": "ee023",
+      "name": "paladin_1h_die.animation",
+      "userData": {
+        "gltfIndex": 1,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.4333332777023315
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "5e3d1": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@5e3d1",
+      "displayName": "",
+      "id": "5e3d1",
+      "name": "paladin_1h_get_hit.animation",
+      "userData": {
+        "gltfIndex": 2,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.9666666388511658
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "b357f": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@b357f",
+      "displayName": "",
+      "id": "b357f",
+      "name": "paladin_1h_idle.animation",
+      "userData": {
+        "gltfIndex": 3,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.366666555404663
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "2a672": {
+      "importer": "gltf-animation",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@2a672",
+      "displayName": "",
+      "id": "2a672",
+      "name": "paladin_1h_run.animation",
+      "userData": {
+        "gltfIndex": 4,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 0.949999988079071
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "7580d": {
+      "importer": "gltf-material",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@7580d",
+      "displayName": "",
+      "id": "7580d",
+      "name": "M_Paladin.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5f38e": {
+      "importer": "gltf-material",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@5f38e",
+      "displayName": "",
+      "id": "5f38e",
+      "name": "M_Elite_Orc.material",
+      "userData": {
+        "gltfIndex": 1
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "ec36e": {
+      "importer": "gltf-material",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@ec36e",
+      "displayName": "",
+      "id": "ec36e",
+      "name": "M_Dungeon_Color.material",
+      "userData": {
+        "gltfIndex": 2
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "034a9": {
+      "importer": "gltf-scene",
+      "uuid": "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@034a9",
+      "displayName": "",
+      "id": "034a9",
+      "name": "P_Paladin.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "animationImportSettings": [
+      {
+        "name": "paladin_1h_attack",
+        "duration": 1.5333333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_1h_attack",
+            "from": 0,
+            "to": 1.5333333015441895,
+            "wrapMode": 2,
+            "previousId": "f72ef"
+          }
+        ]
+      },
+      {
+        "name": "paladin_1h_die",
+        "duration": 1.4333332777023315,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_1h_die",
+            "from": 0,
+            "to": 1.4333332777023315,
+            "wrapMode": 2,
+            "previousId": "ee023"
+          }
+        ]
+      },
+      {
+        "name": "paladin_1h_get_hit",
+        "duration": 0.9666666388511658,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_1h_get_hit",
+            "from": 0,
+            "to": 0.9666666388511658,
+            "wrapMode": 2,
+            "previousId": "5e3d1"
+          }
+        ]
+      },
+      {
+        "name": "paladin_1h_idle",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_1h_idle",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "b357f"
+          }
+        ]
+      },
+      {
+        "name": "paladin_1h_run",
+        "duration": 0.949999988079071,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_1h_run",
+            "from": 0,
+            "to": 0.949999988079071,
+            "wrapMode": 2,
+            "previousId": "2a672"
+          }
+        ]
+      },
+      {
+        "name": "paladin_2h_attack",
+        "duration": 3.4666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_2h_attack",
+            "from": 0,
+            "to": 3.4666666984558105,
+            "wrapMode": 2,
+            "previousId": "d8e9c"
+          }
+        ]
+      },
+      {
+        "name": "paladin_2h_die",
+        "duration": 1.4333332777023315,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_2h_die",
+            "from": 0,
+            "to": 1.4333332777023315,
+            "wrapMode": 2,
+            "previousId": "6f82e"
+          }
+        ]
+      },
+      {
+        "name": "paladin_2h_get_hit",
+        "duration": 1.0833333730697632,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_2h_get_hit",
+            "from": 0,
+            "to": 1.0833333730697632,
+            "wrapMode": 2,
+            "previousId": "30e5b"
+          }
+        ]
+      },
+      {
+        "name": "paladin_2h_idle",
+        "duration": 2.366666555404663,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_2h_idle",
+            "from": 0,
+            "to": 2.366666555404663,
+            "wrapMode": 2,
+            "previousId": "eb9f3"
+          }
+        ]
+      },
+      {
+        "name": "paladin_2h_run",
+        "duration": 1.0166666507720947,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "paladin_2h_run",
+            "from": 0,
+            "to": 1.0166666507720947,
+            "wrapMode": 2,
+            "previousId": "65556"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@034b2",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@a62fe",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@40b15",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@39452",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@1e224",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@44826",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@040d6",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@9ff0c",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@75365"
+      ],
+      "skeletons": [
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@87442"
+      ],
+      "textures": [],
+      "materials": [
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@7580d",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@5f38e",
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@ec36e"
+      ],
+      "scenes": [
+        "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@034a9"
+      ]
+    },
+    "meshCompress": {
+      "enable": true,
+      "compress": true
+    },
+    "useVertexColors": false,
+    "dumpMaterials": false,
+    "depthWriteInAlphaModeBlend": false,
+    "materials": {
+      "8c7b33ef-b04f-4111-b3c9-1dab74d742cb@5f38e": {
+        "__type__": "cc.Material",
+        "_name": "",
+        "_objFlags": 0,
+        "__editorExtras__": {},
+        "_native": "",
+        "_effectAsset": {
+          "__uuid__": "0c67953b-87b0-4619-8c9c-5883cce263fa",
+          "__expectedType__": "cc.EffectAsset"
+        },
+        "_techIdx": 0,
+        "_defines": [
+          {}
+        ],
+        "_states": [
+          {
+            "rasterizerState": {
+              "cullMode": 0
+            },
+            "depthStencilState": {},
+            "blendState": {
+              "targets": [
+                {}
+              ]
+            }
+          }
+        ],
+        "_props": [
+          {
+            "mainTexture": {
+              "__uuid__": "bffe1e37-dea2-4ccb-828b-b407710894a4@6c48a",
+              "__expectedType__": "cc.Texture2D"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
