@@ -1,4 +1,21 @@
-import { _decorator, Component, Node, Camera, Vec3, Prefab, instantiate, CCFloat, director, Canvas, js } from 'cc';
+import {
+    _decorator,
+    Component,
+    Node,
+    Camera,
+    Vec3,
+    Prefab,
+    instantiate,
+    CCFloat,
+    director,
+    Canvas,
+    Sprite,
+    SpriteFrame,
+    Color,
+    Enum,
+    assetManager,
+    js,
+} from 'cc';
 import { HPBar } from './HPBar';
 import { ExpBar } from './ExpBar';
 import { CharStats } from '../Char/CharStats';
@@ -6,27 +23,42 @@ import { GameManager } from '../System/GameManager';
 
 const { ccclass, property } = _decorator;
 
+export enum BarAttacherMode {
+    AUTO_SURVIVAL = 0,   // Hành vi gốc mặc định cho Survival & LCH (tương thích ngược 100%)
+    HERO_EXP_AS_HP = 1,  // 3 Nhân vật lấy ExpBar.prefab làm thanh HP
+    ENEMY_HP = 2,        // Địch lấy EnemyHpBar.prefab (chỉ hiện khi 0 < ratio < 0.999)
+    CHEST_PROGRESS = 3,  // Rương lấy EnemyHpBar.prefab tô vàng làm thanh tiến trình bị mở
+}
+Enum(BarAttacherMode);
+
+const EXP_BAR_UUID = 'a34a358d-ab16-46cc-92b7-2d4b60eb20b4';
+const ENEMY_HP_BAR_UUID = 'e91b47a2-6d05-4c38-b2fe-70a3195cd814';
+const WHITE_FILL_UUID = '13f68e6b-0ac6-417b-990e-b74b3f8eb891@f9941';
+
 /**
  * Quản lý thanh Bar 3D Billboard trên đầu mục tiêu:
- * - Nhân vật: TUYỆT ĐỐI CHỈ CÓ ExpBar (Vàng kim từ ExpBar.prefab)
- * - Quái vật: TUYỆT ĐỐI CHỈ CÓ HpBar (Đỏ từ HpBar.prefab)
- * - Thanh Bar được đặt ở cấp độc lập (parent của mục tiêu hoặc Scene Root),
- *   nhờ đó bám sát 1:1 theo tọa độ thế giới của mục tiêu mà KHÔNG bị ảnh hưởng
- *   bởi tỉ lệ co giãn (scale), góc xoay (rotation) hay physics controller của model.
+ * - Chế độ mặc định (AUTO_SURVIVAL): Giữ nguyên hành vi Survival & LCH.
+ * - Chế độ chủ động (HERO_EXP_AS_HP / ENEMY_HP / CHEST_PROGRESS): Điều khiển trực tiếp qua setRatio(ratio).
  */
 @ccclass('BarAttacher')
 export class BarAttacher extends Component {
+    @property({ type: BarAttacherMode, tooltip: 'Chế độ hoạt động (0: Tự động Survival, 1: Hero ExpBar HP, 2: Địch HpBar, 3: Rương Tiến trình vàng)' })
+    public manualMode: BarAttacherMode = BarAttacherMode.AUTO_SURVIVAL;
+
     @property({ type: Node, tooltip: '3D target node to attach health/exp bar' })
     public targetNode: Node = null;
 
     @property({ type: Camera, tooltip: '3D world camera' })
     public worldCamera: Camera = null;
 
-    @property({ type: Prefab, tooltip: 'Enemy health bar prefab (HpBar.prefab)' })
+    @property({ type: Prefab, tooltip: 'Enemy health bar prefab (EnemyHpBar.prefab / HpBar.prefab)' })
     public hpBarPrefab: Prefab = null;
 
     @property({ type: Prefab, tooltip: 'Player exp bar prefab (ExpBar.prefab)' })
     public expBarPrefab: Prefab = null;
+
+    @property({ type: SpriteFrame, tooltip: 'Sprite trắng (BossHPBarWhite.png) để tô màu vàng cho thanh tiến trình Rương' })
+    public chestWhiteFillSprite: SpriteFrame = null;
 
     @property({ tooltip: '3D offset above target head' })
     public offset3D: Vec3 = new Vec3(0, 1.35, 0);
@@ -42,8 +74,15 @@ export class BarAttacher extends Component {
     private _tempPos: Vec3 = new Vec3();
     private _barWorldPos: Vec3 = new Vec3();
     private _prefabScale: Vec3 = new Vec3(1, 1, 1);
+    private _manualRatio: number = 1.0;
+    private _isLoadingFallback: boolean = false;
 
     onLoad() {
+        if (this.manualMode !== BarAttacherMode.AUTO_SURVIVAL) {
+            this.loadFallbackAssetsIfNeeded();
+            return;
+        }
+
         this.checkIsPlayer();
 
         if (!this._isPlayer) {
@@ -102,9 +141,171 @@ export class BarAttacher extends Component {
     }
 
     start() {
+        if (this.manualMode !== BarAttacherMode.AUTO_SURVIVAL) {
+            this.resolveCamera();
+            this.ensureManualBarCreated();
+            this.setRatio(this._manualRatio);
+            return;
+        }
         if (this._isPlayer) {
             this.resolveCamera();
             this.createBar();
+        }
+    }
+
+    private loadFallbackAssetsIfNeeded(): void {
+        if (this.manualMode === BarAttacherMode.HERO_EXP_AS_HP && !this.expBarPrefab && !this._isLoadingFallback) {
+            this._isLoadingFallback = true;
+            assetManager.loadAny(EXP_BAR_UUID, (err, pf: Prefab) => {
+                this._isLoadingFallback = false;
+                if (!err && pf && this.isValid) {
+                    this.expBarPrefab = pf;
+                    this.setRatio(this._manualRatio);
+                }
+            });
+        } else if (
+            (this.manualMode === BarAttacherMode.ENEMY_HP || this.manualMode === BarAttacherMode.CHEST_PROGRESS)
+            && !this.hpBarPrefab
+            && !this._isLoadingFallback
+        ) {
+            this._isLoadingFallback = true;
+            assetManager.loadAny(ENEMY_HP_BAR_UUID, (err, pf: Prefab) => {
+                this._isLoadingFallback = false;
+                if (!err && pf && this.isValid) {
+                    this.hpBarPrefab = pf;
+                    this.setRatio(this._manualRatio);
+                }
+            });
+        }
+
+        if (!this.chestWhiteFillSprite && this.manualMode === BarAttacherMode.CHEST_PROGRESS) {
+            assetManager.loadAny(WHITE_FILL_UUID, (err, sf: SpriteFrame) => {
+                if (!err && sf && this.isValid) {
+                    this.chestWhiteFillSprite = sf;
+                    this.applyChestGoldStyle();
+                }
+            });
+        }
+    }
+
+    private ensureManualBarCreated(): void {
+        if (!this.isValid || !this.node || !this.node.isValid) return;
+        if (this._barNode && this._barNode.isValid) return;
+
+        const prefab = this.manualMode === BarAttacherMode.HERO_EXP_AS_HP
+            ? this.expBarPrefab
+            : this.hpBarPrefab;
+        if (!prefab) {
+            this.loadFallbackAssetsIfNeeded();
+            return;
+        }
+
+        const sceneRoot: Node = director.getScene() as any;
+        if (!sceneRoot) return;
+
+        this._barNode = instantiate(prefab);
+        if (this.manualMode === BarAttacherMode.HERO_EXP_AS_HP) {
+            const expComp = this._barNode.getComponent(ExpBar);
+            if (expComp) expComp.useAsHealthBar = true;
+        }
+        this._barNode.setParent(sceneRoot);
+
+        const initScale = this._barNode.scale;
+        this._prefabScale.set(
+            initScale.x > 0 ? initScale.x : 1.0,
+            initScale.y > 0 ? initScale.y : 0.35,
+            initScale.z > 0 ? initScale.z : 1.0
+        );
+
+        this.applyBarScale();
+        this.updatePosition();
+        const cam = this.resolveCamera();
+        if (cam && cam.node && cam.node.isValid) {
+            this._barNode.setWorldRotation(cam.node.worldRotation);
+        }
+
+        if (this.manualMode === BarAttacherMode.HERO_EXP_AS_HP) {
+            this._barNode.name = 'DefChest_HeroHP_' + this.node.name;
+            this._expBarComp = this._barNode.getComponent(ExpBar) || this._barNode.addComponent(ExpBar);
+            this._expBarComp.useAsHealthBar = true;
+            this._expBarComp.setProgress(this._manualRatio);
+            this._barNode.active = true;
+        } else if (this.manualMode === BarAttacherMode.CHEST_PROGRESS) {
+            this._barNode.name = 'DefChest_TreasureBar';
+            this._hpBarComp = this._barNode.getComponent(HPBar) || this._barNode.addComponent(HPBar);
+            this.applyChestGoldStyle();
+            this._hpBarComp.setProgress(this._manualRatio);
+            this._barNode.active = true;
+        } else {
+            this._barNode.name = 'DefChest_EnemyHP_' + this.node.name;
+            this._hpBarComp = this._barNode.getComponent(HPBar) || this._barNode.addComponent(HPBar);
+            this._hpBarComp.setProgress(this._manualRatio);
+            this._barNode.active = false;
+        }
+    }
+
+    private applyChestGoldStyle(): void {
+        if (!this._barNode || !this._barNode.isValid || this.manualMode !== BarAttacherMode.CHEST_PROGRESS) return;
+        const fillNode = this._barNode.getChildByName('Fill');
+        const fillSp = fillNode ? fillNode.getComponent(Sprite) : null;
+        if (fillSp) {
+            if (this.chestWhiteFillSprite) {
+                fillSp.spriteFrame = this.chestWhiteFillSprite;
+            }
+            fillSp.type = Sprite.Type.FILLED;
+            fillSp.fillType = Sprite.FillType.HORIZONTAL;
+            fillSp.color = new Color(255, 214, 45, 255);
+        }
+    }
+
+    /**
+     * Điều khiển trực tiếp tỉ lệ thanh Bar (0.0 -> 1.0) cho các chế độ chủ động (Hero HP / Địch HP / Tiến trình Rương).
+     */
+    public setRatio(ratio: number): void {
+        this._manualRatio = Math.max(0, Math.min(1.0, ratio));
+        if (!this.isValid || !this.node || !this.node.isValid) return;
+        if (this.manualMode === BarAttacherMode.AUTO_SURVIVAL) {
+            this.setHpRatio(this._manualRatio);
+            return;
+        }
+
+        this.ensureManualBarCreated();
+        if (!this._barNode || !this._barNode.isValid) return;
+
+        if (this.manualMode === BarAttacherMode.HERO_EXP_AS_HP) {
+            this._barNode.active = this._manualRatio > 0;
+            if (this._expBarComp) {
+                this._expBarComp.useAsHealthBar = true;
+                this._expBarComp.setProgress(this._manualRatio);
+            }
+        } else if (this.manualMode === BarAttacherMode.CHEST_PROGRESS) {
+            this._barNode.active = this._manualRatio > 0;
+            this.applyChestGoldStyle();
+            if (this._hpBarComp) {
+                this._hpBarComp.setProgress(this._manualRatio);
+            }
+        } else {
+            if (this._manualRatio < 0.999 && this._manualRatio > 0) {
+                this._barNode.active = true;
+                this.applyBarScale();
+                if (this._hpBarComp) {
+                    this._hpBarComp.setProgress(this._manualRatio);
+                }
+            } else {
+                this._barNode.active = false;
+            }
+        }
+
+        if (this._barNode.active) {
+            this.updateManualTransform();
+        }
+    }
+
+    private updateManualTransform(): void {
+        this.updatePosition();
+        const cam = this.resolveCamera();
+        if (cam && cam.node && cam.node.isValid && this._barNode && this._barNode.isValid) {
+            this._barNode.setWorldRotation(cam.node.worldRotation);
         }
     }
 
@@ -277,6 +478,13 @@ export class BarAttacher extends Component {
 
     lateUpdate(deltaTime: number) {
         if (!this.isValid || !this.node || !this.node.isValid) return;
+
+        if (this.manualMode !== BarAttacherMode.AUTO_SURVIVAL) {
+            if (this._barNode && this._barNode.isValid && this._barNode.active) {
+                this.updateManualTransform();
+            }
+            return;
+        }
 
         if (this._isPlayer) {
             if (!this._barNode || !this._barNode.isValid) {

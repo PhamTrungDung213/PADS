@@ -1,0 +1,101 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "cdba17cc-93b4-4323-818a-27f4d4f92efd",
+  "files": [],
+  "subMetas": {
+    "e2349": {
+      "importer": "gltf-mesh",
+      "uuid": "cdba17cc-93b4-4323-818a-27f4d4f92efd@e2349",
+      "displayName": "",
+      "id": "e2349",
+      "name": "Mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 3814
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "761f8": {
+      "importer": "gltf-skeleton",
+      "uuid": "cdba17cc-93b4-4323-818a-27f4d4f92efd@761f8",
+      "displayName": "",
+      "id": "761f8",
+      "name": "DeformationSystem.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 84
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0551c": {
+      "importer": "gltf-scene",
+      "uuid": "cdba17cc-93b4-4323-818a-27f4d4f92efd@0551c",
+      "displayName": "",
+      "id": "0551c",
+      "name": "model.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "cdba17cc-93b4-4323-818a-27f4d4f92efd@e2349"
+      ],
+      "skeletons": [
+        "cdba17cc-93b4-4323-818a-27f4d4f92efd@761f8"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "cdba17cc-93b4-4323-818a-27f4d4f92efd@0551c"
+      ]
+    },
+    "useVertexColors": false,
+    "addVertexColor": false,
+    "meshOptimize": {
+      "enable": false
+    },
+    "skipValidation": true,
+    "promoteSingleRootNode": false
+  }
+}

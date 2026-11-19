@@ -1,0 +1,46 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "d1f4c8ae-9241-4adb-99de-7fb47b71d0b6",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "d1f4c8ae-9241-4adb-99de-7fb47b71d0b6@6c48a",
+      "displayName": "T_ExpRoom_dif",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "repeat",
+        "wrapModeT": "repeat",
+        "imageUuidOrDatabaseUri": "d1f4c8ae-9241-4adb-99de-7fb47b71d0b6",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "nearest",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "texture",
+    "hasAlpha": false,
+    "fixAlphaTransparencyArtifacts": false,
+    "redirect": "d1f4c8ae-9241-4adb-99de-7fb47b71d0b6@6c48a",
+    "compressSettings": {
+      "useCompressTexture": true,
+      "presetId": "default"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "63713730-6042-423f-8848-163bd1708c13",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "e7b5e": {
+      "importer": "gltf-animation",
+      "uuid": "63713730-6042-423f-8848-163bd1708c13@e7b5e",
+      "displayName": "",
+      "id": "e7b5e",
+      "name": "lich_special_skill.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.6166666746139526
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "761f8": {
+      "importer": "gltf-skeleton",
+      "uuid": "63713730-6042-423f-8848-163bd1708c13@761f8",
+      "displayName": "",
+      "id": "761f8",
+      "name": "DeformationSystem.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 65
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "61be0": {
+      "importer": "gltf-scene",
+      "uuid": "63713730-6042-423f-8848-163bd1708c13@61be0",
+      "displayName": "",
+      "id": "61be0",
+      "name": "skill.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "animationImportSettings": [
+      {
+        "name": "lich_special_skill",
+        "duration": 1.6166666746139526,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "lich_special_skill",
+            "from": 0,
+            "to": 1.6166666746139526,
+            "wrapMode": 2,
+            "previousId": "e7b5e"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [
+        "63713730-6042-423f-8848-163bd1708c13@761f8"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "63713730-6042-423f-8848-163bd1708c13@61be0"
+      ]
+    }
+  }
+}

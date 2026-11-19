@@ -21,7 +21,10 @@ export class SkillCardView extends Component {
     @property({ type: SpriteFrame, tooltip: 'Gold banner SpriteFrame (Level 3)' })
     public goldBannerFrame: SpriteFrame = null;
 
-    @property({ type: Label, tooltip: 'Skill title label' })
+    @property({ type: Label, tooltip: 'Label chính hiển thị tên kỹ năng phía trên thẻ (Name_Skill)' })
+    public nameLabel: Label = null;
+
+    @property({ type: Label, tooltip: 'Skill title label (Name_Skill2)' })
     public titleLabel: Label = null;
 
     @property({ type: Label, tooltip: 'Skill description label' })
@@ -47,7 +50,7 @@ export class SkillCardView extends Component {
     private static _cachedGoldFrame: SpriteFrame = null;
 
     public currentSkill: SkillData = null;
-    private _onClickCb: (skill: SkillData) => void = null;
+    private _onClickCb: (skill: SkillData, card?: SkillCardView) => void = null;
     private _isInteractable: boolean = false;
 
     public get isInteractable(): boolean {
@@ -75,10 +78,46 @@ export class SkillCardView extends Component {
         if (this.iconSprite && this.iconSprite.isValid) {
             this.iconSprite.node.active = false;
         }
+        this.bindTouchEvents();
+    }
+
+    private bindTouchEvents() {
+        this.unbindTouchEvents();
+        this.node.on(Node.EventType.TOUCH_START, this.onTouchStartSwallow, this);
         this.node.on(Node.EventType.TOUCH_END, this.onClickCard, this);
         const btn = this.getComponent(Button);
         if (btn) {
             this.node.on(Button.EventType.CLICK, this.onClickCard, this);
+        }
+        const banner = this.bannerNode || this.node.getChildByName('Skill_Panel');
+        if (banner && banner.isValid) {
+            banner.on(Node.EventType.TOUCH_START, this.onTouchStartSwallow, this);
+            banner.on(Node.EventType.TOUCH_END, this.onClickCard, this);
+        }
+        const iconNode = this.spinTarget || this.node.getChildByName('Icon_Skill');
+        if (iconNode && iconNode !== this.node && iconNode.isValid) {
+            iconNode.on(Node.EventType.TOUCH_START, this.onTouchStartSwallow, this);
+            iconNode.on(Node.EventType.TOUCH_END, this.onClickCard, this);
+        }
+    }
+
+    private onTouchStartSwallow() {
+        // Giữ nhận diện chạm cho NodeEventProcessor trên Cocos Creator 3.8
+    }
+
+    private unbindTouchEvents() {
+        this.node.off(Node.EventType.TOUCH_START, this.onTouchStartSwallow, this);
+        this.node.off(Node.EventType.TOUCH_END, this.onClickCard, this);
+        this.node.off(Button.EventType.CLICK, this.onClickCard, this);
+        const banner = this.bannerNode || this.node.getChildByName('Skill_Panel');
+        if (banner && banner.isValid) {
+            banner.off(Node.EventType.TOUCH_START, this.onTouchStartSwallow, this);
+            banner.off(Node.EventType.TOUCH_END, this.onClickCard, this);
+        }
+        const iconNode = this.spinTarget || this.node.getChildByName('Icon_Skill');
+        if (iconNode && iconNode !== this.node && iconNode.isValid) {
+            iconNode.off(Node.EventType.TOUCH_START, this.onTouchStartSwallow, this);
+            iconNode.off(Node.EventType.TOUCH_END, this.onClickCard, this);
         }
     }
 
@@ -101,11 +140,7 @@ export class SkillCardView extends Component {
     }
 
     onDestroy() {
-        this.node.off(Node.EventType.TOUCH_END, this.onClickCard, this);
-        const btn = this.getComponent(Button);
-        if (btn) {
-            this.node.off(Button.EventType.CLICK, this.onClickCard, this);
-        }
+        this.unbindTouchEvents();
     }
 
     public cacheBaseTransform() {
@@ -174,6 +209,11 @@ export class SkillCardView extends Component {
                 || this.node.getChildByName('Light_bg')?.getComponentInChildren(Sprite)
                 || this.getComponent(Sprite);
         }
+        if (!this.nameLabel) {
+            this.nameLabel = this.node.getChildByName('Name_Skill')?.getComponent(Label)
+                || this.node.getChildByName('Name')?.getComponent(Label)
+                || null;
+        }
         if (!this.titleLabel) {
             this.titleLabel = this.bannerNode?.getChildByName('Skill_Info')?.getChildByName('Name_Skill2')?.getComponent(Label)
                 || this.node.getChildByName('Name_Skill')?.getComponent(Label)
@@ -184,7 +224,7 @@ export class SkillCardView extends Component {
         }
     }
 
-    public setup(skill: SkillData, level: number, onClick: (skill: SkillData) => void) {
+    public setup(skill: SkillData, level: number, onClick: (skill: SkillData, card?: SkillCardView) => void) {
         this.resolveCardReferences();
         this.currentSkill = skill;
         this._onClickCb = onClick;
@@ -250,13 +290,40 @@ export class SkillCardView extends Component {
         if (bannerSprite) {
             if (level === 1) {
                 const sf = this.greenBannerFrame || SkillCardView._cachedGreenFrame;
-                if (sf) bannerSprite.spriteFrame = sf;
+                if (sf) {
+                    bannerSprite.spriteFrame = sf;
+                } else {
+                    assetManager.loadAny('37d8bbf1-13a8-42f8-884a-fa1715c6a5b6@f9941', (err, asset: SpriteFrame) => {
+                        if (!err && asset && bannerSprite.isValid) {
+                            SkillCardView._cachedGreenFrame = asset;
+                            bannerSprite.spriteFrame = asset;
+                        }
+                    });
+                }
             } else if (level === 2) {
                 const sf = this.purpleBannerFrame || SkillCardView._cachedPurpleFrame;
-                if (sf) bannerSprite.spriteFrame = sf;
+                if (sf) {
+                    bannerSprite.spriteFrame = sf;
+                } else {
+                    assetManager.loadAny('c82301fa-4b8a-4952-b184-e437c95a25f1@f9941', (err, asset: SpriteFrame) => {
+                        if (!err && asset && bannerSprite.isValid) {
+                            SkillCardView._cachedPurpleFrame = asset;
+                            bannerSprite.spriteFrame = asset;
+                        }
+                    });
+                }
             } else {
                 const sf = this.goldBannerFrame || SkillCardView._cachedGoldFrame;
-                if (sf) bannerSprite.spriteFrame = sf;
+                if (sf) {
+                    bannerSprite.spriteFrame = sf;
+                } else {
+                    assetManager.loadAny('d974128b-5c9b-4a63-c295-f548da6b36a2@f9941', (err, asset: SpriteFrame) => {
+                        if (!err && asset && bannerSprite.isValid) {
+                            SkillCardView._cachedGoldFrame = asset;
+                            bannerSprite.spriteFrame = asset;
+                        }
+                    });
+                }
             }
         }
 
@@ -414,14 +481,209 @@ export class SkillCardView extends Component {
             .start();
     }
 
+    public setInteractable(enabled: boolean) {
+        this._isInteractable = enabled;
+        const btn = this.getComponent(Button);
+        if (btn) {
+            btn.interactable = enabled;
+        }
+    }
+
+    /**
+     * Hiệu ứng gacha thẻ bài đồng bộ chuẩn 100% theo độ dài âm thanh gắn vào (audioDuration):
+     * - Trong suốt pha xoay gacha (0 -> spinTime): khóa tương tác, ẩn banner/icon/tên và quay 3D Icon_Skill liên tục.
+     * - Kết thúc pha xoay (spinTime -> totalDur): bung đồng thời Skill_Panel + Icon + Tên + nảy thẻ,
+     *   và mở khóa cho người chơi chạm chọn đúng lúc âm thanh gacha kết thúc.
+     */
+    public setupQuickCard(
+        skill: SkillData,
+        level: number,
+        audioDuration: number,
+        onClick: (skill: SkillData, card?: SkillCardView) => void,
+        onSpinFinished?: () => void
+    ) {
+        this.cacheBaseTransform();
+        this.resolveCardReferences();
+        this.bindTouchEvents();
+        this.unscheduleAllCallbacks();
+
+        const rootUt = this.node.getComponent(UITransform);
+        if (rootUt && (rootUt.width < 340 || rootUt.height < 900)) {
+            rootUt.setContentSize(Math.max(rootUt.width, 340), Math.max(rootUt.height, 900));
+        }
+
+        this.currentSkill = skill;
+        this._onClickCb = onClick;
+        this.setInteractable(false);
+
+        const totalDur = Math.max(0.45, audioDuration > 0 ? audioDuration : 1.6);
+        const revealDur = Math.min(0.26, totalDur * 0.22);
+        const spinTime = Math.max(0.22, totalDur - revealDur);
+
+        if (this.autoColorByLevel) {
+            this.applyLevelColorTheme(level);
+        }
+
+        // Gán sẵn text nhưng giữ ẩn trong lúc xoay gacha, chỉ bung hiện đồng loạt khi xoay xong
+        if (this.nameLabel && skill) {
+            this.nameLabel.string = skill.name;
+            this.nameLabel.node.active = false;
+        }
+        if (this.titleLabel && skill) {
+            this.titleLabel.string = skill.name;
+            this.titleLabel.node.active = true;
+        }
+        if (this.descLabel && skill) {
+            this.descLabel.string = skill.desc;
+            this.descLabel.node.active = true;
+        }
+
+        // Nạp trước spriteFrame cho icon kỹ năng (chưa bật active cho đến khi gacha dừng)
+        const assignIconFrame = (sf: SpriteFrame) => {
+            if (!this.isValid || !this.node.isValid) return;
+            if (this.iconSprite) {
+                this.iconSprite.spriteFrame = sf;
+                const ut = this.iconSprite.getComponent(UITransform);
+                if (ut) ut.setContentSize(186, 186);
+            }
+        };
+
+        if (skill?.icon) {
+            assignIconFrame(skill.icon);
+        } else if (skill?.iconUuid) {
+            assetManager.loadAny(skill.iconUuid, (err, sf: SpriteFrame) => {
+                if (!err && sf && this.currentSkill === skill) {
+                    skill.icon = sf;
+                    assignIconFrame(sf);
+                }
+            });
+        }
+
+        // Ẩn Banner & Icon trong lúc đang quay gacha
+        const banner = this.bannerNode || this.contentPanel;
+        if (banner) {
+            Tween.stopAllByTarget(banner);
+            banner.active = false;
+            banner.setScale(1, 0, 1);
+        }
+        if (this.iconSprite && this.iconSprite.isValid) {
+            const iconNode = this.iconSprite.node;
+            Tween.stopAllByTarget(iconNode);
+            iconNode.active = false;
+            iconNode.setPosition(0, 0, 0);
+            iconNode.setScale(0, 0, 1);
+        }
+
+        Tween.stopAllByTarget(this.node);
+        const s = this.baseScale;
+        this.node.setScale(s);
+
+        // Chạy hiệu ứng quay gacha 3D quanh trục X kéo dài đúng spinTime (số vòng quay tỉ lệ thuận độ dài audio)
+        const iconSkillNode = this.spinTarget || this.node.getChildByName('Icon_Skill') || this.node;
+        const flipTurns = Math.max(2, Math.round(spinTime / 0.36));
+        const totalAngle = flipTurns * 360;
+
+        if (iconSkillNode && iconSkillNode.isValid) {
+            Tween.stopAllByTarget(iconSkillNode);
+            iconSkillNode.setRotationFromEuler(0, 0, 0);
+        }
+
+        const spinState = { ax: 0 };
+        tween(spinState)
+            .to(spinTime, { ax: totalAngle }, {
+                easing: 'cubicOut',
+                onUpdate: () => {
+                    if (iconSkillNode && iconSkillNode.isValid) {
+                        iconSkillNode.setRotationFromEuler(spinState.ax, 0, 0);
+                    }
+                }
+            })
+            .call(() => {
+                if (!this.isValid || !this.node.isValid) return;
+                if (iconSkillNode && iconSkillNode.isValid) {
+                    iconSkillNode.setRotationFromEuler(0, 0, 0);
+                }
+
+                // Xoay xong -> Bung Banner + Icon + Tên đồng loạt trong revealDur
+                if (banner && banner.isValid) {
+                    Tween.stopAllByTarget(banner);
+                    banner.active = true;
+                    banner.setScale(1, 0.05, 1);
+                    tween(banner)
+                        .to(revealDur, { scale: new Vec3(1, 1, 1) }, { easing: 'backOut' })
+                        .start();
+                }
+
+                if (this.iconSprite && this.iconSprite.isValid) {
+                    const iconNode = this.iconSprite.node;
+                    Tween.stopAllByTarget(iconNode);
+                    iconNode.setPosition(0, 0, 0);
+                    iconNode.setScale(0.1, 0.1, 1);
+                    iconNode.active = true;
+                    tween(iconNode)
+                        .to(revealDur, { scale: new Vec3(1, 1, 1) }, { easing: 'backOut' })
+                        .start();
+                }
+
+                if (this.nameLabel && this.nameLabel.node && this.nameLabel.node.isValid) {
+                    this.nameLabel.node.active = true;
+                }
+
+                this.playBounce();
+            })
+            .delay(revealDur)
+            .call(() => {
+                if (!this.isValid || !this.node.isValid) return;
+                this.setInteractable(true);
+                if (onSpinFinished) {
+                    onSpinFinished();
+                }
+            })
+            .start();
+
+        // Kích hoạt cuộn slot reel đồng bộ nếu node có gắn SkillReelView
+        if (this.reelView) {
+            this.reelView.spin(spinTime, skill);
+        }
+    }
+
+    public playSelectedAnim(onDone: () => void) {
+        const s = this.baseScale;
+        Tween.stopAllByTarget(this.node);
+        this.unscheduleAllCallbacks();
+        let called = false;
+        const finishOnce = () => {
+            if (called) return;
+            called = true;
+            onDone();
+        };
+        this.scheduleOnce(finishOnce, 0.22);
+        tween(this.node)
+            .to(0.10, { scale: new Vec3(s.x * 1.14, s.y * 1.14, 1) })
+            .to(0.10, { scale: s })
+            .call(finishOnce)
+            .start();
+    }
+
+    public playUnselectedAnim() {
+        const s = this.baseScale;
+        Tween.stopAllByTarget(this.node);
+        this.unscheduleAllCallbacks();
+        tween(this.node)
+            .to(0.16, { scale: new Vec3(s.x * 0.85, s.y * 0.85, 1) })
+            .start();
+    }
+
     private onClickCard() {
         // Tuyệt đối không cho chọn, không cho nhấn khi chưa hiện xong hoặc chưa hết audio
         if (!this._isInteractable) {
             return;
         }
+        this._isInteractable = false;
+        this.unscheduleAllCallbacks();
 
         if (this._onClickCb && this.currentSkill) {
-            this._onClickCb(this.currentSkill);
+            this._onClickCb(this.currentSkill, this);
         }
     }
 }

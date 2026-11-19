@@ -1,0 +1,115 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "7429c7f8-3b95-46a6-859f-46d9d6baca4e",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "af2cf": {
+      "importer": "gltf-animation",
+      "uuid": "7429c7f8-3b95-46a6-859f-46d9d6baca4e@af2cf",
+      "displayName": "",
+      "id": "af2cf",
+      "name": "skeleton_king_die.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.4666666984558105
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "761f8": {
+      "importer": "gltf-skeleton",
+      "uuid": "7429c7f8-3b95-46a6-859f-46d9d6baca4e@761f8",
+      "displayName": "",
+      "id": "761f8",
+      "name": "DeformationSystem.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 49
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4240d": {
+      "importer": "gltf-scene",
+      "uuid": "7429c7f8-3b95-46a6-859f-46d9d6baca4e@4240d",
+      "displayName": "",
+      "id": "4240d",
+      "name": "die.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "animationImportSettings": [
+      {
+        "name": "skeleton_king_die",
+        "duration": 1.4666666984558105,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "skeleton_king_die",
+            "from": 0,
+            "to": 1.4666666984558105,
+            "wrapMode": 2,
+            "previousId": "af2cf"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [
+        "7429c7f8-3b95-46a6-859f-46d9d6baca4e@761f8"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "7429c7f8-3b95-46a6-859f-46d9d6baca4e@4240d"
+      ]
+    }
+  }
+}

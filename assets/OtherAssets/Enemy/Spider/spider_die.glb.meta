@@ -1,0 +1,115 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "dfb0eacc-c2a3-48d2-957e-a7e73ecf7995",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "d8f13": {
+      "importer": "gltf-animation",
+      "uuid": "dfb0eacc-c2a3-48d2-957e-a7e73ecf7995@d8f13",
+      "displayName": "",
+      "id": "d8f13",
+      "name": "BoneSpider_die.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 2.2833333015441895
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "761f8": {
+      "importer": "gltf-skeleton",
+      "uuid": "dfb0eacc-c2a3-48d2-957e-a7e73ecf7995@761f8",
+      "displayName": "",
+      "id": "761f8",
+      "name": "DeformationSystem.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 34
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "4815e": {
+      "importer": "gltf-scene",
+      "uuid": "dfb0eacc-c2a3-48d2-957e-a7e73ecf7995@4815e",
+      "displayName": "",
+      "id": "4815e",
+      "name": "spider_die.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "animationImportSettings": [
+      {
+        "name": "BoneSpider_die",
+        "duration": 2.2833333015441895,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "BoneSpider_die",
+            "from": 0,
+            "to": 2.2833333015441895,
+            "wrapMode": 2,
+            "previousId": "d8f13"
+          }
+        ]
+      }
+    ],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [
+        "dfb0eacc-c2a3-48d2-957e-a7e73ecf7995@761f8"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "dfb0eacc-c2a3-48d2-957e-a7e73ecf7995@4815e"
+      ]
+    }
+  }
+}

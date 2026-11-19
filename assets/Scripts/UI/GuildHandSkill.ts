@@ -100,34 +100,40 @@ export class GuildHandSkill extends Component {
         // =========================================================================
         // TRƯỜNG HỢP 2: CẤP 1 & 2 - DI CHUYỂN LẦN LƯỢT QUA CẢ 3 THẺ VÀ LẶP LẠI
         // =========================================================================
-        // Đặt vị trí bàn tay ngay tại thẻ bài đầu tiên
         this.node.setPosition(targets[0].pos.clone());
+        this.runMultiCardStep(targets, 0);
+    }
 
-        let t = tween(this.node);
-
-        for (let i = 0; i < targets.length; i++) {
-            const current = targets[i];
-            const next = targets[(i + 1) % targets.length];
-
-            const downPos = current.pos.clone();
-            const upPos = new Vec3(current.pos.x, current.pos.y + this.bounceDistance, 0);
-
-            t = t
-                // 1. Nhịp nảy tại thẻ hiện tại (chạm tay xuống và thẻ nảy lên)
-                .to(0.18, { position: upPos }, { easing: 'sineOut' })
-                .to(0.18, { position: downPos }, { easing: 'sineIn' })
-                .call(() => {
-                    if (current.cardView && current.cardView.isValid) {
-                        current.cardView.playBounce();
-                    }
-                })
-                // 2. Dừng nhẹ 0.15s cho người xem kịp quan sát thẻ
-                .delay(0.15)
-                // 3. Lướt mượt mà sang thẻ kế tiếp
-                .to(this.glideDuration, { position: next.pos }, { easing: 'cubicInOut' });
+    private runMultiCardStep(
+        targets: { pos: Vec3; cardView: SkillCardView | null; node: Node }[],
+        index: number
+    ) {
+        if (!this._isPointing || !this.isValid || !this.node || !this.node.isValid || !this.node.activeInHierarchy) {
+            return;
         }
+        const current = targets[index];
+        const nextIndex = (index + 1) % targets.length;
+        const next = targets[nextIndex];
+        if (!current || !next) return;
 
-        this._tweenAnim = t.union().repeatForever().start();
+        const downPos = current.pos.clone();
+        const upPos = new Vec3(current.pos.x, current.pos.y + this.bounceDistance, 0);
+        const nextPos = next.pos.clone();
+
+        this._tweenAnim = tween(this.node)
+            .to(0.18, { position: upPos }, { easing: 'sineOut' })
+            .to(0.18, { position: downPos }, { easing: 'sineIn' })
+            .call(() => {
+                if (current.cardView && current.cardView.isValid) {
+                    current.cardView.playBounce();
+                }
+            })
+            .delay(0.15)
+            .to(this.glideDuration, { position: nextPos }, { easing: 'cubicInOut' })
+            .call(() => {
+                this.runMultiCardStep(targets, nextIndex);
+            })
+            .start();
     }
 
     public hide() {

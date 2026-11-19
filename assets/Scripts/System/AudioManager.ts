@@ -65,16 +65,51 @@ export class AudioManager extends Component {
     @property({ type: CCFloat, tooltip: 'Âm lượng hiệu ứng gameplay' })
     public gameplayVolume: number = 0.9;
 
+    // ==========================================
+    // NHÓM 5: CLIP BỔ SUNG (RANGER, HEAVY SLAM, RƯƠNG COIN/WIN/FAIL)
+    // ==========================================
+    @property({ type: AudioClip, tooltip: 'Tiếng bắn cung của Ranger (Ranger Attack.mp3)' })
+    public rangerAttackClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng quái tinh anh/giáp trúng đòn (Armored Take Damage.mp3)' })
+    public armoredHitClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng mở Popup Skill Tím - Epic (levelup_epic_sfx.mp3)' })
+    public levelUpEpicClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng cảnh báo Địch tinh anh xuất hiện' })
+    public warningClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng vàng văng ra từ rương (Coin Flying.mp3)' })
+    public coinFlyingClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng vàng rơi chạm đất (Coin hit the ground.mp3)' })
+    public coinLandClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng bật mở rương kho báu (Loot Item.mp3)' })
+    public chestOpenClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng rương vỡ khi thua (armor hit the ground.mp3)' })
+    public chestBreakClip: AudioClip = null;
+
+    @property({ type: AudioClip, tooltip: 'Tiếng thất bại (fail.mp3)' })
+    public failClip: AudioClip = null;
+
     // Các kênh AudioSource chuyên biệt nhằm tránh nghẽn/rớt âm thanh
     private _bgmSource: AudioSource = null;
     private _uiSource: AudioSource = null;
     private _combatSource: AudioSource = null;
     private _enemySource: AudioSource = null;
+    private _fxSource: AudioSource = null;
+    private _coinSource: AudioSource = null;
 
     // Bộ đệm giới hạn tần suất (Rate Limiting) tránh Web Audio bị sập khi quái chết hàng loạt
     private _lastEnemyHitTime: number = 0;
     private _lastEnemyDieTime: number = 0;
     private _lastAttackTime: number = 0;
+    private _lastRangerTime: number = 0;
+    private _lastCoinTime: number = 0;
+    private _lastSlamTime: number = 0;
 
     public isEnding: boolean = false;
     private _isAudioUnlocked: boolean = false;
@@ -108,6 +143,22 @@ export class AudioManager extends Component {
             enemyNode.parent = this.node;
         }
         this._enemySource = enemyNode.getComponent(AudioSource) || enemyNode.addComponent(AudioSource);
+
+        // 5. Kênh FX độc lập (Ranger, Heavy Slam, Warning, Chest Open)
+        let fxNode = this.node.getChildByName('FX_Audio');
+        if (!fxNode) {
+            fxNode = new Node('FX_Audio');
+            fxNode.parent = this.node;
+        }
+        this._fxSource = fxNode.getComponent(AudioSource) || fxNode.addComponent(AudioSource);
+
+        // 6. Kênh Coin / Break độc lập
+        let coinNode = this.node.getChildByName('Coin_Audio');
+        if (!coinNode) {
+            coinNode = new Node('Coin_Audio');
+            coinNode.parent = this.node;
+        }
+        this._coinSource = coinNode.getComponent(AudioSource) || coinNode.addComponent(AudioSource);
 
         // Đăng ký mở khóa Web Audio ngay khi người chơi chạm màn hình lần đầu
         this.setupAudioUnlock();
@@ -174,20 +225,37 @@ export class AudioManager extends Component {
         this.playOneShot(this._combatSource, this.attackClip, this.charVolume);
     }
 
+    public playRangerAttack() {
+        if (this.isEnding) return;
+        const now = Date.now();
+        if (now - this._lastRangerTime < 90) return;
+        this._lastRangerTime = now;
+        this.playOneShot(this._fxSource, this.rangerAttackClip || this.attackClip, this.charVolume);
+    }
+
     public playCrit() {
         if (this.isEnding) return;
         this.playOneShot(this._combatSource, this.critClip, this.charVolume * 1.2);
     }
 
+    public playHeavySlam() {
+        if (this.isEnding) return;
+        const now = Date.now();
+        if (now - this._lastSlamTime < 140) return;
+        this._lastSlamTime = now;
+        this.playOneShot(this._fxSource, this.finalExplosionClip || this.critClip, this.gameplayVolume);
+    }
+
     // ==========================================
     // NHÓM 3: ENEMY SFX (QUÁI)
     // ==========================================
-    public playEnemyHit() {
+    public playEnemyHit(isElite: boolean = false) {
         if (this.isEnding) return;
         const now = Date.now();
         if (now - this._lastEnemyHitTime < 70) return; // Rate limiting 70ms chống tràn bộ đệm
         this._lastEnemyHitTime = now;
-        this.playOneShot(this._enemySource, this.enemyHitClip, this.enemyVolume);
+        const clip = (isElite && this.armoredHitClip) ? this.armoredHitClip : this.enemyHitClip;
+        this.playOneShot(this._enemySource, clip, this.enemyVolume);
     }
 
     public playEnemyDie() {
@@ -236,9 +304,47 @@ export class AudioManager extends Component {
         return fallbackDuration;
     }
 
+    public playUpgradePopup(isLegendary: boolean): number {
+        const clip = isLegendary
+            ? (this.levelUpLegendaryClip || this.levelUpRareClip)
+            : (this.levelUpEpicClip || this.levelUpRareClip);
+        const fallbackDuration = isLegendary ? 2.5 : 1.8;
+        if (clip) {
+            this.playOneShot(this._uiSource, clip, this.gameplayVolume);
+            const dur = clip.getDuration();
+            return dur && dur > 0 ? dur : fallbackDuration;
+        }
+        return fallbackDuration;
+    }
+
     public playSkillSelect() {
         if (this.isEnding) return;
         this.playOneShot(this._uiSource, this.skillSelectClip, this.gameplayVolume);
+    }
+
+    public playWarning() {
+        if (this.isEnding) return;
+        this.playOneShot(this._fxSource, this.warningClip, this.gameplayVolume);
+    }
+
+    public playCoinFlying() {
+        const now = Date.now();
+        if (now - this._lastCoinTime < 120) return;
+        this._lastCoinTime = now;
+        this.playOneShot(this._coinSource, this.coinFlyingClip, this.gameplayVolume * 0.7);
+    }
+
+    public playCoinLand() {
+        this.playOneShot(this._coinSource, this.coinLandClip, this.gameplayVolume * 0.65);
+    }
+
+    public playChestOpen() {
+        this.playOneShot(this._fxSource, this.chestOpenClip, this.gameplayVolume);
+    }
+
+    public playChestBreak() {
+        this.playOneShot(this._fxSource, this.finalExplosionClip, this.gameplayVolume);
+        this.playOneShot(this._coinSource, this.chestBreakClip, this.gameplayVolume);
     }
 
     public playVictory() {
@@ -252,6 +358,12 @@ export class AudioManager extends Component {
             return;
         }
         this.playOneShot(this._uiSource, this.victoryClip, this.gameplayVolume);
+    }
+
+    public playFail() {
+        this.isEnding = true;
+        this.stopBGM();
+        this.playOneShot(this._uiSource, this.failClip, this.gameplayVolume);
     }
 
     /**

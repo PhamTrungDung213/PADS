@@ -1,0 +1,652 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755",
+  "files": [],
+  "subMetas": {
+    "57470": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@57470",
+      "displayName": "",
+      "id": "57470",
+      "name": "FKMiddleLeg4_L.skeleton",
+      "userData": {
+        "gltfIndex": 19,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "62923": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@62923",
+      "displayName": "",
+      "id": "62923",
+      "name": "FKPincers_R.skeleton",
+      "userData": {
+        "gltfIndex": 22,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "63480": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@63480",
+      "displayName": "",
+      "id": "63480",
+      "name": "FKBackLeg3_R.skeleton",
+      "userData": {
+        "gltfIndex": 4,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "68328": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@68328",
+      "displayName": "",
+      "id": "68328",
+      "name": "IKXOffsetFrontLeg2_L.skeleton",
+      "userData": {
+        "gltfIndex": 28,
+        "jointsLength": 3
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "99755": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@99755",
+      "displayName": "",
+      "id": "99755",
+      "name": "FKFrontLeg2_L.skeleton",
+      "userData": {
+        "gltfIndex": 8,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e2349": {
+      "importer": "gltf-mesh",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@e2349",
+      "displayName": "",
+      "id": "e2349",
+      "name": "Mesh.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 1524
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "761f8": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@761f8",
+      "displayName": "",
+      "id": "761f8",
+      "name": "DeformationSystem.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 34
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "04619": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@04619",
+      "displayName": "",
+      "id": "04619",
+      "name": "FKBackLeg2_L.skeleton",
+      "userData": {
+        "gltfIndex": 1,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "573d1": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@573d1",
+      "displayName": "",
+      "id": "573d1",
+      "name": "FKBackLeg2_R.skeleton",
+      "userData": {
+        "gltfIndex": 2,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "09805": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@09805",
+      "displayName": "",
+      "id": "09805",
+      "name": "FKBackLeg3_L.skeleton",
+      "userData": {
+        "gltfIndex": 3,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d7d96": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@d7d96",
+      "displayName": "",
+      "id": "d7d96",
+      "name": "FKBackLeg4_L.skeleton",
+      "userData": {
+        "gltfIndex": 5,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1195e": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@1195e",
+      "displayName": "",
+      "id": "1195e",
+      "name": "FKBackLeg4_R.skeleton",
+      "userData": {
+        "gltfIndex": 6,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "9cca8": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@9cca8",
+      "displayName": "",
+      "id": "9cca8",
+      "name": "FKChest_M.skeleton",
+      "userData": {
+        "gltfIndex": 7,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "008cc": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@008cc",
+      "displayName": "",
+      "id": "008cc",
+      "name": "FKFrontLeg2_R.skeleton",
+      "userData": {
+        "gltfIndex": 9,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "2f474": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@2f474",
+      "displayName": "",
+      "id": "2f474",
+      "name": "FKFrontLeg3_L.skeleton",
+      "userData": {
+        "gltfIndex": 10,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "941d8": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@941d8",
+      "displayName": "",
+      "id": "941d8",
+      "name": "FKFrontLeg3_R.skeleton",
+      "userData": {
+        "gltfIndex": 11,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "5ddcc": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@5ddcc",
+      "displayName": "",
+      "id": "5ddcc",
+      "name": "FKFrontLeg4_L.skeleton",
+      "userData": {
+        "gltfIndex": 12,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "47f79": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@47f79",
+      "displayName": "",
+      "id": "47f79",
+      "name": "FKFrontLeg4_R.skeleton",
+      "userData": {
+        "gltfIndex": 13,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d58b6": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@d58b6",
+      "displayName": "",
+      "id": "d58b6",
+      "name": "FKHead_M.skeleton",
+      "userData": {
+        "gltfIndex": 14,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "d51ca": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@d51ca",
+      "displayName": "",
+      "id": "d51ca",
+      "name": "FKMiddleLeg2_L.skeleton",
+      "userData": {
+        "gltfIndex": 15,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e7657": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@e7657",
+      "displayName": "",
+      "id": "e7657",
+      "name": "FKMiddleLeg2_R.skeleton",
+      "userData": {
+        "gltfIndex": 16,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "b03f1": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@b03f1",
+      "displayName": "",
+      "id": "b03f1",
+      "name": "FKMiddleLeg3_L.skeleton",
+      "userData": {
+        "gltfIndex": 17,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7249a": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@7249a",
+      "displayName": "",
+      "id": "7249a",
+      "name": "FKMiddleLeg3_R.skeleton",
+      "userData": {
+        "gltfIndex": 18,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "64b4b": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@64b4b",
+      "displayName": "",
+      "id": "64b4b",
+      "name": "FKMiddleLeg4_R.skeleton",
+      "userData": {
+        "gltfIndex": 20,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41c69": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@41c69",
+      "displayName": "",
+      "id": "41c69",
+      "name": "FKPincers_L.skeleton",
+      "userData": {
+        "gltfIndex": 21,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "526f3": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@526f3",
+      "displayName": "",
+      "id": "526f3",
+      "name": "FKRoot_M.skeleton",
+      "userData": {
+        "gltfIndex": 23,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "6af47": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@6af47",
+      "displayName": "",
+      "id": "6af47",
+      "name": "FKSpine1_M.skeleton",
+      "userData": {
+        "gltfIndex": 24,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "cbe23": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@cbe23",
+      "displayName": "",
+      "id": "cbe23",
+      "name": "FKTail1_M.skeleton",
+      "userData": {
+        "gltfIndex": 25,
+        "jointsLength": 1
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "66f39": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@66f39",
+      "displayName": "",
+      "id": "66f39",
+      "name": "IKXOffsetBackLeg2_L.skeleton",
+      "userData": {
+        "gltfIndex": 26,
+        "jointsLength": 3
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "e6c18": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@e6c18",
+      "displayName": "",
+      "id": "e6c18",
+      "name": "IKXOffsetBackLeg2_R.skeleton",
+      "userData": {
+        "gltfIndex": 27,
+        "jointsLength": 3
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "41f0c": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@41f0c",
+      "displayName": "",
+      "id": "41f0c",
+      "name": "IKXOffsetFrontLeg2_R.skeleton",
+      "userData": {
+        "gltfIndex": 29,
+        "jointsLength": 3
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "c94d0": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@c94d0",
+      "displayName": "",
+      "id": "c94d0",
+      "name": "IKXOffsetMiddleLeg2_L.skeleton",
+      "userData": {
+        "gltfIndex": 30,
+        "jointsLength": 3
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "43e92": {
+      "importer": "gltf-skeleton",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@43e92",
+      "displayName": "",
+      "id": "43e92",
+      "name": "IKXOffsetMiddleLeg2_R.skeleton",
+      "userData": {
+        "gltfIndex": 31,
+        "jointsLength": 3
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "0551c": {
+      "importer": "gltf-scene",
+      "uuid": "b2685d2b-199b-47fb-abb1-62b2bb9b7755@0551c",
+      "displayName": "",
+      "id": "0551c",
+      "name": "model.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@e2349"
+      ],
+      "skeletons": [
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@761f8",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@04619",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@573d1",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@09805",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@63480",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@d7d96",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@1195e",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@9cca8",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@99755",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@008cc",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@2f474",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@941d8",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@5ddcc",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@47f79",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@d58b6",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@d51ca",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@e7657",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@b03f1",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@7249a",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@57470",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@64b4b",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@41c69",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@62923",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@526f3",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@6af47",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@cbe23",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@66f39",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@e6c18",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@68328",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@41f0c",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@c94d0",
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@43e92"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "b2685d2b-199b-47fb-abb1-62b2bb9b7755@0551c"
+      ]
+    }
+  }
+}

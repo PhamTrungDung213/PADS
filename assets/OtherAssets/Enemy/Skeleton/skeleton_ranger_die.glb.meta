@@ -1,0 +1,115 @@
+{
+  "ver": "2.3.14",
+  "importer": "gltf",
+  "imported": true,
+  "uuid": "985ea7e5-6053-49db-8534-9a2db388f1e0",
+  "files": [
+    "__original-animation-0.bin"
+  ],
+  "subMetas": {
+    "47d97": {
+      "importer": "gltf-animation",
+      "uuid": "985ea7e5-6053-49db-8534-9a2db388f1e0@47d97",
+      "displayName": "",
+      "id": "47d97",
+      "name": "skeleton_archer_die.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 2,
+        "sample": 30,
+        "span": {
+          "from": 0,
+          "to": 1.2333333492279053
+        },
+        "events": []
+      },
+      "ver": "1.0.18",
+      "imported": true,
+      "files": [
+        ".bin"
+      ],
+      "subMetas": {}
+    },
+    "761f8": {
+      "importer": "gltf-skeleton",
+      "uuid": "985ea7e5-6053-49db-8534-9a2db388f1e0@761f8",
+      "displayName": "",
+      "id": "761f8",
+      "name": "DeformationSystem.skeleton",
+      "userData": {
+        "gltfIndex": 0,
+        "jointsLength": 48
+      },
+      "ver": "1.0.1",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "3c1b1": {
+      "importer": "gltf-scene",
+      "uuid": "985ea7e5-6053-49db-8534-9a2db388f1e0@3c1b1",
+      "displayName": "",
+      "id": "3c1b1",
+      "name": "skeleton_ranger_die.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [
+        "985ea7e5-6053-49db-8534-9a2db388f1e0@761f8"
+      ],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "985ea7e5-6053-49db-8534-9a2db388f1e0@3c1b1"
+      ]
+    },
+    "animationImportSettings": [
+      {
+        "name": "skeleton_archer_die",
+        "duration": 1.2333333492279053,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "skeleton_archer_die",
+            "from": 0,
+            "to": 1.2333333492279053,
+            "wrapMode": 2,
+            "previousId": "47d97"
+          }
+        ]
+      }
+    ]
+  }
+}
